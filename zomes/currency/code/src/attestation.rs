@@ -83,8 +83,10 @@ pub fn entry_definition() -> ValidatingEntryType {
     )
 }
 
-// fn  Confirm_Or_Reject_Attestation_For_Transaction(attenstation_address){
+// fn  Confirm_Or_Reject_Transaction(attestation_address){
 // attestation = DHT.query()
-// double check : TODO: here we need to double check the occuracy of Ledger of sender to know it has enough balance
-// then Confrim, or Reject the attestation.
+// result { last_5_tnx_attestation_address, transaction } = send_message_get_your_last_5_transaction();
+// double check DHT for the last 5 attestation and  last_5_tnx_attestation_address.
+// if still the balance can cover amount, update attestation Status = Confirm
+//  else Update attestation Status = Reject
 //}
